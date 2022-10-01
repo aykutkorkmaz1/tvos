@@ -2,6 +2,9 @@ import React from "react";
 import Background from '../media/acapulco2.jpeg';
 import { Link } from 'react-router-dom';
 
+import BottomMenu from "../components/BottomMenu";
+import AppleNav from "../components/AppleNav";
+
 import BlackBird from '../media/black_bird.jpeg';
 import ForAllMankind from '../media/for_all_mankind.jpeg';
 import See from '../media/see.jpeg';
@@ -12,27 +15,12 @@ import Wecrashed from '../media/wecrashed.jpeg';
 export default function AppleTV () {
     return(
             <div style={{ backgroundImage: `url('${Background}')` }} className="AppleTvMain">
-                <div className="AppleTvNav">
-                    <div className="AppleTvNavItem">Watch Now</div>
-                    <div className="AppleTvNavItem">Movies</div>
-                    <div className="AppleTvNavItem">TV Shows</div>
-                    <div className="AppleTvNavItem">Sports</div>
-                    <div className="AppleTvNavItem">Kids</div>
-                    <div className="AppleTvNavItem">Library</div>
-                </div>
+                
+                <AppleNav />
 
                 <Link to="/"><div className="BackToHome"> <p>Home</p> </div></Link>
 
-                <div className="AppleTvBottomMenu">
-                    <div className="BottomMenuRow">
-                        <div className="BottomMenuItem"> <img src={BlackBird} /> </div>
-                        <div className="BottomMenuItem"> <img src={ForAllMankind} /> </div>
-                        <div className="BottomMenuItem"> <img src={See} /> </div>
-                        <div className="BottomMenuItem"> <img src={SlowHorses} /> </div>
-                        <div className="BottomMenuItem"> <img src={TedLasso} /> </div>
-                        <div className="BottomMenuItem"> <img src={Wecrashed} /> </div>
-                    </div>
-                </div>
+                <BottomMenu />
 
                 <style jsx>
                     {`
@@ -74,81 +62,6 @@ export default function AppleTV () {
                             border: 1px solid #fff;
                             color: #000000;
                             transition: 0.3s;
-                        }
-                        
-                        .AppleTvNav {
-                            position: absolute;
-                            top: 20px;
-                            left: 0;
-                            right: 0;
-                            margin: 0 auto;
-                            max-width: 55em;
-                            height: 45px;
-                            display: flex;
-                            background-color: rgba(0, 0, 0, 0.8);
-                            border-radius: 50px;
-
-                        }
-                        
-                        .AppleTvNavItem {
-                            text-align: center;
-                            margin: auto;
-                            width: 10em;
-                            height: auto;
-                            line-height: 45px;
-                            font-weight: 500;
-                            font-size: 15px;
-                            color: #ffffff;
-                            
-                            transition: 0.3s;
-                        }
-                        
-                        .AppleTvNavItem:hover {
-                            transform: scale(1.1);
-                            background-color: #ffffff;
-                            border-radius: 50px;
-                            color: #000000;
-
-                            transition: 0.3s;
-                        }
-                        
-                        .AppleTvBottomMenu {
-                            position: absolute;
-                            bottom: 20px;
-                            left: 20px;
-                            right: 0;
-                            border-radius: 10px;
-                            background-color: rgba(0, 0, 0, 0.8);
-                            width: max-content;
-                            height: 27%;
-                        }
-                        
-                        .BottomMenuRow {
-                            display: flex;
-                        }
-
-                        .BottomMenuRow:hover .BottomMenuItem {
-                            transform: translateX(-10%);
-                        }
-
-                        .BottomMenuItem:hover ~ .BottomMenuItem {
-                            transform: translateX(10%);
-                         }
-                        
-                        .BottomMenuItem {
-                            margin: 20px 0 20px 20px;
-                            width: 25%;
-                            height: auto;
-                            transition: 0.2s;
-                        }
-                        
-                        .BottomMenuItem img {
-                            border-radius: 10px;
-                        }
-
-                        .BottomMenuItem:hover {
-                            transition: 0.3s;
-                            transform: scale(1.1) !important;
                         }
 
                     `}

@@ -14,8 +14,8 @@ export default function AppRow () {
                 <Link to="/apple-tv"> <div className="row-app-item"> <img src={AppleTV} /> </div> </Link>
                 <div className="row-app-item"> <img src={AppleArcade} /> </div>
                 <div className="row-app-item"> <img src={AppleFitness} /> </div>
-                <div className="row-app-item"> <img src={AppleMusic} /> </div>
-                <div className="row-app-item"> <img src={ApplePhotos} /> </div>
+                <div className="row-app-item"> <img src={AppleMusic} /> </div>        
+                <Link to="/apple-photos"> <div className="row-app-item"> <img src={ApplePhotos} /> </div> </Link>
             </div>
 
             <style jsx>

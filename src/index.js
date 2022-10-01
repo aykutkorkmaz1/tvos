@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+
 import AppleTV from './pages/AppleTv';
+import ApplePhotos from './pages/ApplePhotos';
 
 import {
   BrowserRouter,
@@ -16,6 +18,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/apple-tv" element={<AppleTV />} />
+      <Route path="/apple-photos" element={<ApplePhotos />} />
     </Routes>
   </BrowserRouter>
 );
