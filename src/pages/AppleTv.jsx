@@ -5,13 +5,6 @@ import { Link } from 'react-router-dom';
 import BottomMenu from "../components/BottomMenu";
 import AppleNav from "../components/AppleNav";
 
-import BlackBird from '../media/black_bird.jpeg';
-import ForAllMankind from '../media/for_all_mankind.jpeg';
-import See from '../media/see.jpeg';
-import SlowHorses from '../media/slow_horses.jpeg';
-import TedLasso from '../media/ted_lasso.jpeg';
-import Wecrashed from '../media/wecrashed.jpeg';
-
 export default function AppleTV () {
     return(
             <div style={{ backgroundImage: `url('${Background}')` }} className="AppleTvMain">
